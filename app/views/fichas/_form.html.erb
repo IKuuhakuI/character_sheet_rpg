@@ -1,0 +1,73 @@
+<%= form_for(@ficha) do |f| %>
+  <% if @ficha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha.errors.count, "error") %> prohibited this ficha from being saved:</h2>
+
+      <ul>
+      <% @ficha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nome %><br>
+    <%= f.text_field :Nome %>
+  </div>
+  <div class="field">
+    <%= f.label :Raça %><br>
+    <%= f.select :Raça, ["Elfo Negro", "Elfo da Floresta", "Elfo Alto", "Humano", "Anão", "Anão da Montanha", "Gnomo da Floresta", "Gnomo da Pedra", "Meio-orc", "Meio-elfo"] %>
+  </div>
+  <div class="field">
+    <%= f.label :Classe %><br>
+    <%= f.select :Classe, ['Bárbaro','Bardo','Clérigo','Druida','Guerreiro','Monge','Paladino','Patrulheiro','Ladino','Feiticeiro','Bruxo','Mago']%>
+  </div>
+  <div class="field">
+    <%= f.label :Nível %><br>
+    <%= f.select :Nível, (1..20) %>
+  </div>
+  <div class="field">
+    <%= f.label :Antecedente %><br>
+    <%= f.select :Antecedente, ['Acoólito','Charlatão','Criminoso','Artista','Herói do Povo','Gladiador','Artesão da Guilda','Mercante da Guilda','Eremita','Guerreiro','Nobre','Forasteiro','Pirata','Sábio','Navegador','Soldado','Espião','Órfão'] %>
+  </div>
+  <div class="field">
+    <%= f.label :Alinhamento %><br>
+    <%= f.select :Alinhamento, ["Leal Bom", "Neutro Bom", "Caótico Bom", "Leal Neutro", "Neutro", "Caótico Neutro", "Leal Mau", "Neutro Mau", "Caótico Mau"] %>
+  </div>
+  <div class="field">
+    <%= f.label :Dado_Vida %><br>
+    <%= f.select :Dado_Vida, ["D6", "D8", "D10"] %>
+  </div>
+  <div class="field">
+    <%= f.label :Força %><br>
+    <%= f.select :Força, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Destreza %><br>
+    <%= f.select :Destreza, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Constituição %><br>
+    <%= f.select :Constituição, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Inteligência %><br>
+    <%= f.select :Inteligência, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Sabedoria %><br>
+    <%= f.select :Sabedoria, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Carisma %><br>
+    <%= f.select :Carisma, [8, 10, 12, 13, 14, 15] %>
+  </div>
+  <div class="field">
+    <%= f.label :Classe_de_Armadura %><br>
+    <%= f.select :Classe_de_Armadura, (11..20) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
