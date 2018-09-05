@@ -1,3 +1,24 @@
+<style type="text/css">
+    .field{
+      background-color: transparent;
+      margin-left: 600px;
+    }
+    .actions{
+      margin-left: 600px;
+    }
+    .bg{
+      background-image: url("https://img.elo7.com.br/product/zoom/1887F4B/0-papel-pergaminho-pergaminho.jpg");
+      height: 100%;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  </style>
+
+<div class="bg">
+
 <%= form_for(@ficha) do |f| %>
   <% if @ficha.errors.any? %>
     <div id="error_explanation">
@@ -55,11 +76,11 @@
     <%= f.label :Inteligência %><br>
     <%= f.select :Inteligência, [8, 10, 12, 13, 14, 15] %>
   </div>
-  <div class="field">
+  <div class="field" id = "Sabedoria">
     <%= f.label :Sabedoria %><br>
     <%= f.select :Sabedoria, [8, 10, 12, 13, 14, 15] %>
   </div>
-  <div class="field">
+  <div class="field" id = "Carisma">
     <%= f.label :Carisma %><br>
     <%= f.select :Carisma, [8, 10, 12, 13, 14, 15] %>
   </div>
@@ -70,4 +91,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  </div>
 <% end %>
+
