@@ -8,7 +8,10 @@
     }
     .bg{
       background-image: url("https://img.elo7.com.br/product/zoom/1887F4B/0-papel-pergaminho-pergaminho.jpg");
-      height: 100%;
+      height: 870px;
+
+      padding-top: 10px;
+
 
       background-position: center;
       background-repeat: no-repeat;
@@ -88,9 +91,11 @@
     <%= f.label :Classe_de_Armadura %><br>
     <%= f.select :Classe_de_Armadura, (11..20) %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+  
   </div>
 <% end %>
 

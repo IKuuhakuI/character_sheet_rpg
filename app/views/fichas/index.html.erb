@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Fichas</h1>
+<h1>Personagens</h1>
 
 <table>
   <thead>
@@ -9,7 +9,7 @@
       <th>Raça</th>
       <th>Classe</th>
       <th>Nível</th>
-      <th>Antecedente</th>
+      <!--<th>Antecedente</th>
       <th>Alinhamento</th>
       <th>Dado vida</th>
       <th>Força</th>
@@ -18,7 +18,7 @@
       <th>Inteligência</th>
       <th>Sabedoria</th>
       <th>Carisma</th>
-      <th>Classe de armadura</th>
+      <th>Classe de armadura</th>-->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,9 +28,9 @@
       <tr>
         <td><%= ficha.Nome %></td>
         <td><%= ficha.Raça %></td>
-        <td><%= ficha.Classe %></td>
-        <td><%= ficha.Nível %></td>
-        <td><%= ficha.Antecedente %></td>
+        <td style="padding-left: 15px;"><%= ficha.Classe %></td>
+        <td style="padding-left: 15px;"><%= ficha.Nível %></td>
+        <!--<td><%= ficha.Antecedente %></td>
         <td><%= ficha.Alinhamento %></td>
         <td><%= ficha.Dado_Vida %></td>
         <td><%= ficha.Força %></td>
@@ -39,10 +39,10 @@
         <td><%= ficha.Inteligência %></td>
         <td><%= ficha.Sabedoria %></td>
         <td><%= ficha.Carisma %></td>
-        <td><%= ficha.Classe_de_Armadura %></td>
-        <td><%= link_to 'Show', ficha %></td>
-        <td><%= link_to 'Edit', edit_ficha_path(ficha) %></td>
-        <td><%= link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= ficha.Classe_de_Armadura %></td>-->
+        <td><%= link_to 'Mais detalhes', ficha %></td>
+        <td><%= link_to 'Editar', edit_ficha_path(ficha) %></td>
+        <td><%= link_to 'Destruir ficha', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,4 +50,4 @@
 
 <br>
 
-<%= link_to 'New Ficha', new_ficha_path %>
+<%= link_to 'Criar novo personagem', new_ficha_path %>
