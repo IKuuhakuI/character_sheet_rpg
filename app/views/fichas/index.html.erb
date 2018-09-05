@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fichas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Raça</th>
+      <th>Classe</th>
+      <th>Nível</th>
+      <th>Antecedente</th>
+      <th>Alinhamento</th>
+      <th>Dado vida</th>
+      <th>Força</th>
+      <th>Destreza</th>
+      <th>Constituição</th>
+      <th>Inteligência</th>
+      <th>Sabedoria</th>
+      <th>Carisma</th>
+      <th>Classe de armadura</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fichas.each do |ficha| %>
+      <tr>
+        <td><%= ficha.Nome %></td>
+        <td><%= ficha.Raça %></td>
+        <td><%= ficha.Classe %></td>
+        <td><%= ficha.Nível %></td>
+        <td><%= ficha.Antecedente %></td>
+        <td><%= ficha.Alinhamento %></td>
+        <td><%= ficha.Dado_Vida %></td>
+        <td><%= ficha.Força %></td>
+        <td><%= ficha.Destreza %></td>
+        <td><%= ficha.Constituição %></td>
+        <td><%= ficha.Inteligência %></td>
+        <td><%= ficha.Sabedoria %></td>
+        <td><%= ficha.Carisma %></td>
+        <td><%= ficha.Classe_de_Armadura %></td>
+        <td><%= link_to 'Show', ficha %></td>
+        <td><%= link_to 'Edit', edit_ficha_path(ficha) %></td>
+        <td><%= link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha', new_ficha_path %>

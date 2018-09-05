@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nome: MyString
+  Raça: MyString
+  Classe: MyString
+  Nível: 1
+  Antecedente: MyString
+  Alinhamento: MyString
+  Dado_Vida: MyString
+  Força: 1
+  Destreza: 1
+  Constituição: 1
+  Inteligência: 1
+  Sabedoria: 1
+  Carisma: 1
+  Classe_de_Armadura: 1
+
+two:
+  Nome: MyString
+  Raça: MyString
+  Classe: MyString
+  Nível: 1
+  Antecedente: MyString
+  Alinhamento: MyString
+  Dado_Vida: MyString
+  Força: 1
+  Destreza: 1
+  Constituição: 1
+  Inteligência: 1
+  Sabedoria: 1
+  Carisma: 1
+  Classe_de_Armadura: 1
