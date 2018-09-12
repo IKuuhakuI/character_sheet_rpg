@@ -1,26 +1,72 @@
 <style type="text/css">
-    .field{
+      .field{
       background-color: transparent;
-      margin-left: 600px;
     }
     .actions{
       margin-left: 600px;
     }
-    .bg{
-      background-image: url("https://img.elo7.com.br/product/zoom/1887F4B/0-papel-pergaminho-pergaminho.jpg");
-      height: 870px;
-
-      padding-top: 10px;
-
-
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
+    #nome{
+      margin-top: -1455px;
+      margin-left: 120px;
     }
-  </style>
+    #raca{
+      margin-top: -20px;
+      margin-left: 500px;
+    }
+    #classe{
+      margin-top: -90px;
+      margin-left: 500px;
+    }
+    #nivel{
+      margin-top: -41px;
+      margin-left:620px;
+    }
+    #antecedente{
+      margin-top: -41px;
+      margin-left: 695px;
+    }
+    #alinhamento{
+      margin-top: 17px;
+      margin-left: 695px;
+    }
+    #dado{
+      margin-top: 240px;
+      margin-left: 528px;
+    }
+    #forca{
+      margin-top: -160px;
+      margin-left: 75px;
+    }
+    #destreza{
+      margin-top: 110px;
+      margin-left: 75px;
+    }
+    #constituicao{
+      margin-top: 110px;
+      margin-left: 75px;
+    }
+    #inteligencia{
+      margin-top: 100px;
+      margin-left: 75px;
+    }
+    #sabedoria{
+      margin-top: 100px;
+      margin-left: 75px;
+    }
+    #carisma{
+      margin-top: 100px;
+      margin-left: 75px;
+    }
+    #ca{
+      margin-top: -730px;
+      margin-left: 429px;
+    }
+    #btnCreate{
+      margin-top: -80px;
+      margin-left: 215px;
+    }
 
-<div class="bg">
+</style>
 
 <%= form_for(@ficha) do |f| %>
   <% if @ficha.errors.any? %>
@@ -35,67 +81,114 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Nome %><br>
-    <%= f.text_field :Nome %>
-  </div>
-  <div class="field">
-    <%= f.label :Raça %><br>
-    <%= f.select :Raça, ["Elfo Negro", "Elfo da Floresta", "Elfo Alto", "Humano", "Anão", "Anão da Montanha", "Gnomo da Floresta", "Gnomo da Pedra", "Meio-orc", "Meio-elfo"] %>
-  </div>
-  <div class="field">
-    <%= f.label :Classe %><br>
-    <%= f.select :Classe, ['Bárbaro','Bardo','Clérigo','Druida','Guerreiro','Monge','Paladino','Patrulheiro','Ladino','Feiticeiro','Bruxo','Mago']%>
-  </div>
-  <div class="field">
-    <%= f.label :Nível %><br>
-    <%= f.select :Nível, (1..20) %>
-  </div>
-  <div class="field">
-    <%= f.label :Antecedente %><br>
-    <%= f.select :Antecedente, ['Acoólito','Charlatão','Criminoso','Artista','Herói do Povo','Gladiador','Artesão da Guilda','Mercante da Guilda','Eremita','Guerreiro','Nobre','Forasteiro','Pirata','Sábio','Navegador','Soldado','Espião','Órfão'] %>
-  </div>
-  <div class="field">
-    <%= f.label :Alinhamento %><br>
-    <%= f.select :Alinhamento, ["Leal Bom", "Neutro Bom", "Caótico Bom", "Leal Neutro", "Neutro", "Caótico Neutro", "Leal Mau", "Neutro Mau", "Caótico Mau"] %>
-  </div>
-  <div class="field">
-    <%= f.label :Dado_Vida %><br>
-    <%= f.select :Dado_Vida, ["D6", "D8", "D10"] %>
-  </div>
-  <div class="field">
-    <%= f.label :Força %><br>
-    <%= f.select :Força, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field">
-    <%= f.label :Destreza %><br>
-    <%= f.select :Destreza, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field">
-    <%= f.label :Constituição %><br>
-    <%= f.select :Constituição, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field">
-    <%= f.label :Inteligência %><br>
-    <%= f.select :Inteligência, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field" id = "Sabedoria">
-    <%= f.label :Sabedoria %><br>
-    <%= f.select :Sabedoria, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field" id = "Carisma">
-    <%= f.label :Carisma %><br>
-    <%= f.select :Carisma, [8, 10, 12, 13, 14, 15] %>
-  </div>
-  <div class="field">
-    <%= f.label :Classe_de_Armadura %><br>
-    <%= f.select :Classe_de_Armadura, (11..20) %>
-  </div>
+  <div id="ficha">
+    <!--IMAGEM DE FUNDO-->
+      <img style="margin-top: -15px;" src="http://2.bp.blogspot.com/-BBMd4ESFCns/Va46WxSw0vI/AAAAAAAAAYs/6ZP-Z_y0S4Y/s1600/ficha-flying.jpg">
+    <!--FIM IMAGEM DE FUNDO-->
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
+    <!--NOME-->
+      <div class="field" id="nome">
+        <!--<%= f.label :Nome %><br>-->
+        <%= f.text_field :Nome %>
+      </div>
+    <!--FIM NOME-->
+
+    <!--RAÇA-->
+      <div class="field" id="raca">
+        <!--<%= f.label :Raça %><br>-->
+        <%= f.select :Raça, ["Elfo Negro", "Elfo da Floresta", "Elfo Alto", "Humano", "Anão", "Anão da Montanha", "Gnomo da Floresta", "Gnomo da Pedra", "Meio-orc", "Meio-elfo"] %>
+      </div>
+    <!--FIM RAÇA-->
+
+    <!--CLASSE-->
+      <div class="field" id="classe">
+        <!--<%= f.label :Classe %><br>-->
+        <%= f.select :Classe, ['Bárbaro','Bardo','Clérigo','Druida','Guerreiro','Monge','Paladino','Patrulheiro','Ladino','Feiticeiro','Bruxo','Mago']%>
+      </div>
+    <!--CLASSE-->
+    
+    <!--NIVEL-->
+      <div class="field" id="nivel">
+        <!--<%= f.label :Nível %><br>-->
+        <%= f.select :Nível, (1..20) %>
+      </div>
+    <!--FIM NIVEL-->
+
+    <!--ANTECEDENTE-->
+      <div class="field" id="antecedente">
+        <!--<%= f.label :Antecedente %><br>-->
+        <%= f.select :Antecedente, ['Acoólito','Charlatão','Criminoso','Artista','Herói do Povo','Gladiador','Artesão da Guilda','Mercante da Guilda','Eremita','Guerreiro','Nobre','Forasteiro','Pirata','Sábio','Navegador','Soldado','Espião','Órfão'] %>
+      </div>
+    <!--FIM ANTECEDENTE-->
+
+    <!--ALINHAMENTO-->
+      <div class="field" id="alinhamento">
+        <!--<%= f.label :Alinhamento %><br>-->
+        <%= f.select :Alinhamento, ["Leal Bom", "Neutro Bom", "Caótico Bom", "Leal Neutro", "Neutro", "Caótico Neutro", "Leal Mau", "Neutro Mau", "Caótico Mau"] %>
+      </div>
+    <!--FIM ALINHAMENTO-->
+
+    <!--DADO-->
+      <div class="field" id ="dado">
+        <!--<%= f.label :Dado_Vida %><br>-->
+        <%= f.select :Dado_Vida, ["D6", "D8", "D10"] %>
+      </div>
+    <!--FIM DADO-->
+
+    <!--FORÇA-->
+      <div class="field" id="forca">
+        <!--<%= f.label :Força %><br>-->
+        <%= f.select :Força, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM FORÇA-->
+
+    <!--DESTREZA-->
+      <div class="field" id="destreza">
+        <!--<%= f.label :Destreza %><br>-->
+        <%= f.select :Destreza, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM DESTREZA-->
+
+    <!--CONSTITUICAO-->
+      <div class="field" id="constituicao">
+        <!--<%= f.label :Constituição %><br>-->
+        <%= f.select :Constituição, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM CONSTITUICAO-->
+
+    <!--INTELIGENCIA-->
+      <div class="field" id="inteligencia">
+        <!--<%= f.label :Inteligência %><br>-->
+        <%= f.select :Inteligência, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM INTELIGENCIA-->
+
+    <!--SABEDORIA-->
+      <div class="field" id = "sabedoria">
+        <!--<%= f.label :Sabedoria %><br>-->
+        <%= f.select :Sabedoria, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM SABEDORIA-->
+
+    <!--CARISMA-->
+      <div class="field" id = "carisma">
+        <!--<%= f.label :Carisma %><br>-->
+        <%= f.select :Carisma, [8, 10, 12, 13, 14, 15] %>
+      </div>
+    <!--FIM CARISMA-->
+
+    <!--CLASSE DE ARMADURA-->
+      <div class="field" id="ca">
+        <!--<%= f.label :Classe_de_Armadura %><br>-->
+        <%= f.select :Classe_de_Armadura, (11..20) %>
+      </div>
+    <!--FIM CLASSE DE ARMADURA-->
+
+    <div class="actions" id="btnCreate">
+      <script type="text/javascript">
+        
+      </script>
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
-

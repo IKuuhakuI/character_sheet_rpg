@@ -1,74 +1,141 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
+      .field{
+      background-color: transparent;
+    }
+    .actions{
+      margin-left: 600px;
+    }
+    #nome{
+      margin-top: -1463px;
+      margin-left: 115px;
+      font-size: 25px;
+    }
+    #raca{
+      margin-top: -16px;
+      margin-left: 500px;
+      font-size: 14px;
+    }
+    #classe{
+      margin-top: -80px;
+      margin-left: 500px;
+      font-size: 14px;
+    }
+    #nivel{
+      margin-top: -32px;
+      margin-left: 575px;
+      font-size: 14px;
+    }
+    #antecedente{
+      margin-top: -32px;
+      margin-left: 710px;
+      font-size: 14px;
+    }
+    #alinhamento{
+      margin-top: 30px;
+      margin-left: 710px;
+      font-size: 14px;
+    }
+    #dado{
+      margin-top: 245px;
+      margin-left: 528px;
+      font-size: 50px;
+    }
+    #forca{
+      margin-top: -180px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #destreza{
+      margin-top: 120px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #constituicao{
+      margin-top: 115px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #inteligencia{
+      margin-top: 120px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #sabedoria{
+      margin-top: 110px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #carisma{
+      margin-top: 115px;
+      margin-left: 75px;
+      font-size: 50px;
+    }
+    #ca{
+      margin-top: -760px;
+      margin-left: 432px;
+      font-size: 40px;
+    }
 
-<p>
-  <strong>Nome:</strong>
+</style>
+<img style="margin-top: -15px;" src="http://2.bp.blogspot.com/-BBMd4ESFCns/Va46WxSw0vI/AAAAAAAAAYs/6ZP-Z_y0S4Y/s1600/ficha-flying.jpg">
+<p id="notice"><%= notice %></p>
+<p id="nome">
   <%= @ficha.Nome %>
 </p>
 
-<p>
-  <strong>Raça:</strong>
+<p id="raca">
   <%= @ficha.Raça %>
 </p>
 
-<p>
-  <strong>Classe:</strong>
+<p id="classe">
   <%= @ficha.Classe %>
 </p>
 
-<p>
-  <strong>Nível:</strong>
+<p id="nivel">
   <%= @ficha.Nível %>
 </p>
 
-<p>
-  <strong>Antecedente:</strong>
+<p id="antecedente">
   <%= @ficha.Antecedente %>
 </p>
 
-<p>
-  <strong>Alinhamento:</strong>
+<p id="alinhamento">
   <%= @ficha.Alinhamento %>
 </p>
 
-<p>
-  <strong>Dado vida:</strong>
+<p id="dado">
   <%= @ficha.Dado_Vida %>
 </p>
 
-<p>
-  <strong>Força:</strong>
+<p id="forca">
   <%= @ficha.Força %>
 </p>
 
-<p>
-  <strong>Destreza:</strong>
+<p id="destreza">
   <%= @ficha.Destreza %>
 </p>
 
-<p>
-  <strong>Constituição:</strong>
+<p id="constituicao">
   <%= @ficha.Constituição %>
 </p>
 
-<p>
-  <strong>Inteligência:</strong>
+<p id ="inteligencia">
   <%= @ficha.Inteligência %>
 </p>
 
-<p>
-  <strong>Sabedoria:</strong>
+<p id="sabedoria">
   <%= @ficha.Sabedoria %>
 </p>
 
-<p>
-  <strong>Carisma:</strong>
+<p id="carisma">
   <%= @ficha.Carisma %>
 </p>
 
-<p>
-  <strong>Classe de armadura:</strong>
+<p id="ca">
   <%= @ficha.Classe_de_Armadura %>
 </p>
 
+<div style="margin-top: 1210px; font-size: 30px;">
 <%= link_to 'Editar', edit_ficha_path(@ficha) %> |
 <%= link_to 'Voltar', fichas_path %>
+</div>
